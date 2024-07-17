@@ -1,0 +1,535 @@
+
+<html>
+<head>
+    <title>Catálogo de Produtos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .product img {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 5px;
+            background-color: #fff;
+            max-width: 100%;
+            height: auto;
+        }
+        .product h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #007bff;
+            text-align: center;
+        }
+        .header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .search-bar {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .search-bar input {
+            width: 90%;
+            max-width: 600px;
+            padding: 10px;
+            font-size: 1em;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px auto;
+            max-width: 200px;
+            height: auto;
+        }
+        @media (min-width: 600px) {
+            .product {
+                flex-direction: row;
+            }
+            .product img {
+                margin-right: 20px;
+                margin-bottom: 0;
+            }
+            .product h2 {
+                text-align: left;
+            }
+        }
+    </style>
+    <script>
+        function searchProducts() {
+            var input, filter, container, products, h2, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            container = document.getElementById('productsContainer');
+            products = container.getElementsByClassName('product');
+            for (i = 0; i < products.length; i++) {
+                h2 = products[i].getElementsByTagName('h2')[0];
+                txtValue = h2.textContent || h2.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    products[i].style.display = '';
+                } else {
+                    products[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Catálogo de Produtos</h1>
+    </div>
+    <div class="container">
+        <img src="product_images/logo.jpg" alt="Betina Soluções em Limpeza" class="logo">
+        <div class="search-bar">
+            <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Buscar produtos...">
+        </div>
+        <div id="productsContainer">
+
+            <div class="product">
+                <img src="product_images\Chapa Rossi.jpg" alt="Chapa Rossi">
+                <h2>Chapa Rossi</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Chapa Milagre.jpg" alt="Chapa Milagre">
+                <h2>Chapa Milagre</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Chapa Super Betina.jpg" alt="Chapa Super Betina">
+                <h2>Chapa Super Betina</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\40 Furos.jpg" alt="40 Furos">
+                <h2>40 Furos</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Gary 30 cm 36 Furos.jpg" alt="Gary 30 cm 36 Furos">
+                <h2>Gary 30 cm 36 Furos</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Gary 40 cm 48 Furos.jpg" alt="Gary 40 cm 48 Furos">
+                <h2>Gary 40 cm 48 Furos</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Gary Federal.jpg" alt="Gary Federal">
+                <h2>Gary Federal</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\40 Furos Cola.jpg" alt="40 Furos Cola">
+                <h2>40 Furos Cola</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Gary Cola.jpg" alt="Gary Cola">
+                <h2>Gary Cola</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Escova p_ Cavalo.jpg" alt="Escova p/ Cavalo">
+                <h2>Escova p/ Cavalo</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Crina Natural.jpg" alt="Crina Natural">
+                <h2>Crina Natural</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Crina 40cm.jpg" alt="Crina 40cm">
+                <h2>Crina 40cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Crina 60cm.jpg" alt="Crina 60cm">
+                <h2>Crina 60cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Mais Moderna.jpg" alt="Mais Moderna">
+                <h2>Mais Moderna</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Durável.jpg" alt="Durável">
+                <h2>Durável</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Durável 40cm.jpg" alt="Durável 40cm">
+                <h2>Durável 40cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Durável 60cm.jpg" alt="Durável 60cm">
+                <h2>Durável 60cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Betina Plus.jpg" alt="Betina Plus">
+                <h2>Betina Plus</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Lava Casa.jpg" alt="Lava Casa">
+                <h2>Lava Casa</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Moderna Plus.jpg" alt="Moderna Plus">
+                <h2>Moderna Plus</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Moderna.jpg" alt="Moderna">
+                <h2>Moderna</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Vassoura p_ Jardim Rossita.jpg" alt="Vassoura p/ Jardim Rossita">
+                <h2>Vassoura p/ Jardim Rossita</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Esfrega e Limpa.jpg" alt="Esfrega e Limpa">
+                <h2>Esfrega e Limpa</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Rodinho Rossi.jpg" alt="Rodinho Rossi">
+                <h2>Rodinho Rossi</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Rodopia Mais Leve.jpg" alt="Rodopia Mais Leve">
+                <h2>Rodopia Mais Leve</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Rodo Plástico 60 cm.jpg" alt="Rodo Plástico 60 cm">
+                <h2>Rodo Plástico 60 cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Rodo Maxi Duplo 30cm.jpg" alt="Rodo Maxi Duplo 30cm">
+                <h2>Rodo Maxi Duplo 30cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Rodo Maxi Duplo 40cm.jpg" alt="Rodo Maxi Duplo 40cm">
+                <h2>Rodo Maxi Duplo 40cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Rodo 30cm.jpg" alt="Rodo 30cm">
+                <h2>Rodo 30cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Rodo 40cm.jpg" alt="Rodo 40cm">
+                <h2>Rodo 40cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Rodo 60cm.jpg" alt="Rodo 60cm">
+                <h2>Rodo 60cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Rodo Plástico 35cm.jpg" alt="Rodo Plástico 35cm">
+                <h2>Rodo Plástico 35cm</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Mini Pia.jpg" alt="Mini Pia">
+                <h2>Mini Pia</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Pia.jpg" alt="Pia">
+                <h2>Pia</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Limpa Tina.jpg" alt="Limpa Tina">
+                <h2>Limpa Tina</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Limpa Teto.jpg" alt="Limpa Teto">
+                <h2>Limpa Teto</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Pá para Lixo Rossi.jpg" alt="Pá para Lixo Rossi">
+                <h2>Pá para Lixo Rossi</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Pá para Lixo Betina.jpg" alt="Pá para Lixo Betina">
+                <h2>Pá para Lixo Betina</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Pá p_ Lixo c_ Cabo.jpg" alt="Pá p/ Lixo c/ Cabo">
+                <h2>Pá p/ Lixo c/ Cabo</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Lavadeira 1030.jpg" alt="Lavadeira 1030">
+                <h2>Lavadeira 1030</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Lavadeira 1030 Plus.jpg" alt="Lavadeira 1030 Plus">
+                <h2>Lavadeira 1030 Plus</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Lavadeira 1040.jpg" alt="Lavadeira 1040">
+                <h2>Lavadeira 1040</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Lavadeira 1050.jpg" alt="Lavadeira 1050">
+                <h2>Lavadeira 1050</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Escova Sapato 2030.jpg" alt="Escova Sapato 2030">
+                <h2>Escova Sapato 2030</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Unha 3010.jpg" alt="Unha 3010">
+                <h2>Unha 3010</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Unha Dupla Face 3020.jpg" alt="Unha Dupla Face 3020">
+                <h2>Unha Dupla Face 3020</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Escova 3030 c_ Alça.jpg" alt="Escova 3030 c/ Alça">
+                <h2>Escova 3030 c/ Alça</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Lavador Sanitário c_ Estojo.jpg" alt="Lavador Sanitário c/ Estojo">
+                <h2>Lavador Sanitário c/ Estojo</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Espanadeira Sintética.jpg" alt="Espanadeira Sintética">
+                <h2>Espanadeira Sintética</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Espanadeira de Crina.jpg" alt="Espanadeira de Crina">
+                <h2>Espanadeira de Crina</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Desentupidor Pia Sanfonado.jpg" alt="Desentupidor Pia Sanfonado">
+                <h2>Desentupidor Pia Sanfonado</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Desentupidor Pia PVC.jpg" alt="Desentupidor Pia PVC">
+                <h2>Desentupidor Pia PVC</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Desentupidor Sanitário.jpg" alt="Desentupidor Sanitário">
+                <h2>Desentupidor Sanitário</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Pedra Sanitária Lavanda.jpg" alt="Pedra Sanitária Lavanda">
+                <h2>Pedra Sanitária Lavanda</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Pedra Sanitária Jasmim.jpg" alt="Pedra Sanitária Jasmim">
+                <h2>Pedra Sanitária Jasmim</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Pedra Sanitária Floral.jpg" alt="Pedra Sanitária Floral">
+                <h2>Pedra Sanitária Floral</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Pedra Sanitária Citrus.jpg" alt="Pedra Sanitária Citrus">
+                <h2>Pedra Sanitária Citrus</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Naftalina Rossi.jpg" alt="Naftalina Rossi">
+                <h2>Naftalina Rossi</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Penas n° 20.jpg" alt="Penas n° 20">
+                <h2>Penas n° 20</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Penas n° 25.jpg" alt="Penas n° 25">
+                <h2>Penas n° 25</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Penas n° 35.jpg" alt="Penas n° 35">
+                <h2>Penas n° 35</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Penas n° 40.jpg" alt="Penas n° 40">
+                <h2>Penas n° 40</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Esponja de Aço.jpg" alt="Esponja de Aço">
+                <h2>Esponja de Aço</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Bucha Brilho Ouro.jpg" alt="Bucha Brilho Ouro">
+                <h2>Bucha Brilho Ouro</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Bucha Brilho Delicada.jpg" alt="Bucha Brilho Delicada">
+                <h2>Bucha Brilho Delicada</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Esponja Dupla Face Brasilieninha.jpg" alt="Esponja Dupla Face Brasilieninha">
+                <h2>Esponja Dupla Face Brasilieninha</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Esfrega e Limpa Médio com Alça.jpg" alt="Esfrega e Limpa Médio com Alça">
+                <h2>Esfrega e Limpa Médio com Alça</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Esfrega e Limpa Pesado com Alça.jpg" alt="Esfrega e Limpa Pesado com Alça">
+                <h2>Esfrega e Limpa Pesado com Alça</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Fecha-Tudo.jpg" alt="Fecha-Tudo">
+                <h2>Fecha-Tudo</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Corda p_ Varal.jpg" alt="Corda p/ Varal">
+                <h2>Corda p/ Varal</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Prendedores de Madeira.jpg" alt="Prendedores de Madeira">
+                <h2>Prendedores de Madeira</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Prendedores Plásticos 12 dz.jpg" alt="Prendedores Plásticos 12 dz">
+                <h2>Prendedores Plásticos 12 dz</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Prendedores Plásticos 50 dz.jpg" alt="Prendedores Plásticos 50 dz">
+                <h2>Prendedores Plásticos 50 dz</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Flanela 38x58.jpg" alt="Flanela 38x58">
+                <h2>Flanela 38x58</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Flanela 28x38.jpg" alt="Flanela 28x38">
+                <h2>Flanela 28x38</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Flanela 28x48.jpg" alt="Flanela 28x48">
+                <h2>Flanela 28x48</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Luva Látex M.jpg" alt="Luva Látex M">
+                <h2>Luva Látex M</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Luva Látex P.jpg" alt="Luva Látex P">
+                <h2>Luva Látex P</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Luva Látex G.jpg" alt="Luva Látex G">
+                <h2>Luva Látex G</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Luvas Multiuso Plus Santa Limpeza.jpg" alt="Luvas Multiuso Plus Santa Limpeza">
+                <h2>Luvas Multiuso Plus Santa Limpeza</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Luvas Tarefas Pesadas Santa Limpeza.jpg" alt="Luvas Tarefas Pesadas Santa Limpeza">
+                <h2>Luvas Tarefas Pesadas Santa Limpeza</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Luvas Louça Santa Limpeza.jpg" alt="Luvas Louça Santa Limpeza">
+                <h2>Luvas Louça Santa Limpeza</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Panesponja Spontex Pano Vegetal 3 unids.jpg" alt="Panesponja Spontex Pano Vegetal 3 unids">
+                <h2>Panesponja Spontex Pano Vegetal 3 unids</h2>
+            </div>
+            
+            <div class="product">
+                <img src="product_images\Pano Multiuso Microfibra Spontex 4 unids.jpg" alt="Pano Multiuso Microfibra Spontex 4 unids">
+                <h2>Pano Multiuso Microfibra Spontex 4 unids</h2>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
